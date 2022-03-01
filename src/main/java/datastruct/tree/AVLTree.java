@@ -52,13 +52,13 @@ public class AVLTree {
     }
 
     public void LRRotate(AVLNode node) {
-        LLRotate(node.leftChild);
-        RRRotate(node);
+        RRRotate(node.leftChild);
+        LLRotate(node);
     }
 
     public void RLRotate(AVLNode node) {
-        RRRotate(node.rightChild);
-        LLRotate(node);
+        LLRotate(node.rightChild);
+        RRRotate(node);
     }
 
     public static class AVLNode {
